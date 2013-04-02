@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+ <Ad>
+    <ImageUrl>era2.gif</ImageUrl>
+    <NavigateUrl>http://www.creativerge.net/portfolio/capabilities/web-development.html</NavigateUrl>
+    <AlternateText>Creativerge.net</AlternateText>
+    <Impressions>1</Impressions>
+    <Keyword>Computer</Keyword>
+ </Ad>
+ <Ad>
+    <ImageUrl>era.gif</ImageUrl>
+    <NavigateUrl>http://www.creativerge.net/portfolio/capabilities/web-development.html</NavigateUrl>
+    <AlternateText>Creativerge.net</AlternateText>
+    <Impressions>1</Impressions>
+    <Keyword>Computer</Keyword>
+ </Ad>
+ <Ad>
+    <ImageUrl>how.jpg</ImageUrl>
+    <NavigateUrl>http://www.brighthub.com/internet/web-development/articles/101713.aspx</NavigateUrl>
+    <AlternateText>ProseTech Site</AlternateText>
+    <Impressions>1</Impressions>
+    <Keyword>Computer</Keyword>
+ </Ad>
+</Advertisements>

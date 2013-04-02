@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+   <siteMapNode title="Welcome" description="Welcome" url="~/Navigation/welcome.aspx">
+      <siteMapNode title="Writing" description="Writing" 
+         url="~/Navigation/Writing.aspx">
+         <siteMapNode title="Books" description="Books"
+            url="~/Navigation/Books.aspx">
+            <siteMapNode title="In Print Books" 
+               description="Books in Print"
+            url="~/Navigation/BooksInPrint.aspx" />
+            <siteMapNode title="Out Of Print Books" 
+               description="Books no longer in Print"
+            url="~/Navigation/OutOfPrintBooks.aspx" />
+         </siteMapNode>
+         <siteMapNode title="Articles" description="Articles" 
+            url="~/Navigation/Articles.aspx" />
+      </siteMapNode>
+      <siteMapNode title="Programming" 
+         description="Contract Programming" 
+         url="~/Navigation/Programming.aspx">
+         <siteMapNode title="On-Site Programming" 
+            description="On-site contract programming" 
+            url="~/Navigation/OnSiteProgramming.aspx" />
+         <siteMapNode title="Off-Site Programming" 
+            description="Off-site contract programming" 
+            url="~/Navigation/OffSiteProgramming.aspx" />
+      </siteMapNode>
+      <siteMapNode title="Training" 
+         description="On-Site Training" 
+         url="~/Navigation/Training.aspx">
+         <siteMapNode title="VB Training" 
+            description="VB Training" 
+            url="~/Navigation/TrainVBNet.aspx" />
+         <siteMapNode title="ASP.NET Training" 
+            description="ASP.NET Training" 
+            url="~/Navigation/TrainASPNET.aspx" />
+         <siteMapNode title="Windows Forms Training" 
+            description="Windows Forms Training" 
+            url="~/Navigation/TrainWinForms.aspx" />
+      </siteMapNode>
+     <siteMapNode title="Consulting"
+        description="You need consulting!"
+        url="~/Navigation/Consulting.aspx">
+       <siteMapNode title="Application Analysis"
+          description="Analysis"
+          url="~/Navigation/ApplicationAnalysis.aspx" />
+       <siteMapNode title="Application Design"
+          description="Design"
+          url="~/Navigation/ApplicationDesign.aspx" />
+       <siteMapNode title="Mentoring"
+          description="Team Mentoring"
+          url="~/Navigation/Mentoring.aspx" />
+     </siteMapNode>
+
+   </siteMapNode>
+</siteMap>

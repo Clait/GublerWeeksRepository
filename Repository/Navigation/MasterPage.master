@@ -1,0 +1,44 @@
+<%@ Master Language="C#" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div style="background-color: #E8DDB0; border-style: solid; border-width: medium">
+    
+        <!-- Add SiteMapDataSource here -->       
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+    <h2>Treeview Control</h2>
+                
+        <!-- Add TreeView here -->
+        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"></asp:TreeView>    
+            
+    <h2>Menu Control</h2>
+        
+        <!-- Add Menu here -->         
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu> 
+        <br />
+        <br />
+    <h2>SiteMapPath Control</h2>
+                  
+        <!-- Add SiteMapPath here -->
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+
+    </div>
+    <hr />
+               
+        <asp:contentplaceholder id="ContentPlaceHolder1" 
+           runat="server">
+        </asp:contentplaceholder> 
+       
+       
+    </div>
+    </form>
+</body>
+</html>

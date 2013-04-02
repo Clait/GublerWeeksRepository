@@ -1,0 +1,146 @@
+/* Common tags                 */
+/*-----------------------------*/		
+
+body 
+{
+    font-family:Verdana;
+    font-size:small;
+    color:#000000;
+    margin: 0;
+    padding: 0;
+	margin-right: 30;
+	text-align: left;
+ }
+
+A:link      { color: #8A170F; text-decoration:none; }
+A:visited 	{ color: #8A170F; text-decoration:none; }
+A:active 	{ color: #8A170F;  cursor:hand; text-decoration:none; }
+A:hover 	{ color: #DA2D26;  cursor:hand; text-decoration:"underline"; }
+		
+A.bodyLink:link     { color: #8A170F; text-decoration:none; font-weight:bold; }
+A.bodyLink:visited 	{ color: #8A170F; text-decoration:none; font-weight:bold; }
+A.bodyLink:active 	{ color: #8A170F;  cursor:hand; text-decoration:none; font-weight:bold; }
+A.bodyLink:hover 	{ color: #DA2D26;  cursor:hand; text-decoration:"underline"; font-weight:bold; }
+		
+p
+{
+	line-height: 1.4em;
+}
+
+.title
+{
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: large;
+    font-weight: bold;
+    color: #8A170F;
+ }
+
+hr {
+	border: 0;
+	border-top: 2px solid #8A170F;
+	height: 2px;
+}
+
+img
+{
+	border-width: 0;
+}
+
+ul
+{
+	list-style-image: url(Images/bullet.jpg);
+	list-style-position: outside;
+	list-style-type: disc;
+	color: #000000;
+	font-family: verdana;
+}
+
+.menutextindent
+{
+    font-size: x-small;
+}
+
+/* Headings                    */
+/*-----------------------------*/
+h1
+{
+	font-size: large;
+	color: #DA2D26
+}
+
+h2
+{
+	font-family: Verdana;
+	font-size: medium;
+	margin-top: 30;
+	color: #DA2D26;
+	margin-bottom: -15;
+}
+	
+h3
+{
+	font-family: Verdana;
+	font-size: small;
+	margin-bottom: -15;
+	color: #DA2D26;
+	padding-left: 15;
+}
+
+h1, h2, h3, h4
+{
+	margin: 0;
+	font-family: Verdana;
+}
+
+/* Tables                      */
+/*-----------------------------*/	
+table
+{
+	font-size: 1em;
+}
+
+table.header
+{
+	  background-color:#8C170E;
+}
+
+td.logo
+{
+	text-align: left;
+	width: 184px;
+}
+
+td.title 
+	{
+		text-align: center;
+		font-family: verdana;
+		font-size: x-large;
+		font-weight: bolder;
+		color: #FFFFFF;
+	}
+
+td.headerbar 
+{
+	background-image: url(Images/bar.jpg);
+	text-align: right;
+	height: 24px;
+}
+
+td.menu 
+{
+	background-color:#8A170F;
+	width: 184px;
+	height: 500px;
+	vertical-align: top;
+}
+
+td.footer
+{
+	margin-left: 30;
+	font-family: Verdana;
+	font-size:xx-small;
+	font-weight: normal;
+	color: #8A170F;
+	text-align: right;
+}

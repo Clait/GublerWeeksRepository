@@ -1,0 +1,21 @@
+<asp:Label Runat="server" ForeColor="#004000" Font-Names="Verdana" 
+            Font-Size="X-Small" />
+
+<asp:Textbox Runat="server" ForeColor="#004000" Font-Names="Verdana"
+            Font-Size="X-Small" BorderStyle="Solid" BorderWidth="1px" 
+            BorderColor="#004000" Font-Bold="True" />
+            
+<asp:Textbox Runat="server" SkinID="TextBoxDotted" ForeColor="#000000" Font-Names="Verdana"
+            Font-Size="X-Small" BorderStyle="Dotted" BorderWidth="5px" 
+            BorderColor="#000000" Font-Bold="False" />
+            
+<asp:Textbox Runat="server" SkinID="TextBoxDashed" ForeColor="#000000" Font-Names="Arial"
+            Font-Size="X-Large" BorderStyle="Dashed" BorderWidth="3px" 
+            BorderColor="#000000" Font-Bold="False" />
+            
+<asp:Button Runat="server" ForeColor="#004000" Font-Names="Verdana"
+            Font-Size="X-Small" BorderStyle="Solid" BorderWidth="1px" 
+            BorderColor="#004000" Font-Bold="True" BackColor="#FFE0C0" />
+
+<asp:Panel runat="server" BackColor="SeaShell" BorderColor="Black" BorderStyle="Solid"
+                BorderWidth="1px" />
