@@ -125,6 +125,11 @@
                 <asp:HyperLink ID="HyperLink62" target="_blank" runat="server" NavigateUrl="~/Instructions/17-Security_ Sp13 MIS-5050-001.pdf"><asp:Image ID="Image33" runat="server" ImageUrl="~/Instructions/webpage.png" /></asp:HyperLink>
                 <asp:HyperLink ID="HyperLink63" runat="server" target="_blank" NavigateUrl="~/Instructions/17-Security-Membership-Profiles_CRE_Instructions.pdf"><asp:Image ID="Image34" runat="server" ImageUrl="~/Instructions/File.png" valign="top"/></asp:HyperLink></h3><hr width="420px" align="left"/>
                 <ul>  Login - <asp:HyperLink ID="HyperLink64" target="_blank" runat="server" NavigateUrl="~/Membership/Login.aspx" >Login.aspx</asp:HyperLink></ul>
-
+<br />
+    <br /> 
+    <h3><asp:Label ID="Label18" runat="server" Text="Label" Width="380px">Exercise 18 - Ajax</asp:Label>
+                <asp:HyperLink ID="HyperLink65" target="_blank" runat="server" NavigateUrl="~/Instructions/18-Ajax_ Sp13 MIS-5050-001.pdf"><asp:Image ID="Image35" runat="server" ImageUrl="~/Instructions/webpage.png" /></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink66" runat="server" target="_blank" NavigateUrl="~/Instructions/18-Ajax_CRE_Instructions.pdf"><asp:Image ID="Image36" runat="server" ImageUrl="~/Instructions/File.png" valign="top"/></asp:HyperLink></h3><hr width="420px" align="left"/>
+                <ul>  Login - <asp:HyperLink ID="HyperLink67" target="_blank" runat="server" NavigateUrl="~/Membership/Login.aspx" >AjaxNewGreetingCardMaker.aspx, AjaxToolkit.aspx</asp:HyperLink></ul>
    </ul>
 </asp:Content>
