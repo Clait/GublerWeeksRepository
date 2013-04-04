@@ -27,5 +27,5 @@
     <asp:Table ID="Table2" runat="server" Height="77px" Width="791px">
     </asp:Table>
 </p>
-<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update Profile" />
 
