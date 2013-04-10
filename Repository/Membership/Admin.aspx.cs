@@ -11,7 +11,10 @@ public partial class Membership_Admin : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         GridView1.DataSource = Membership.GetAllUsers();
-        GridView1.DataBind();
+        if (!IsPostBack)
+        {
+            GridView1.DataBind();
+        }
     }
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
@@ -51,5 +54,22 @@ public partial class Membership_Admin : System.Web.UI.Page
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
+    }
+    protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+    {
+        string username = GridView1.Rows[e.RowIndex].Cells[1].Text;
+        CheckBox cbx = ((CheckBox)GridView1.Rows[e.RowIndex].FindControl("CheckBox1"));
+        
+        if (cbx.Checked && !Roles.IsUserInRole(username, "Admin"))
+        {
+            Roles.AddUserToRole(username, "Admin");
+        }
+        else if (!cbx.Checked && Roles.IsUserInRole(username,"Admin"))
+        {
+            Roles.RemoveUserFromRole(username, "Admin");
+        }
+
+        GridView1.EditIndex = -1;
+        GridView1.DataBind();
     }
 }
