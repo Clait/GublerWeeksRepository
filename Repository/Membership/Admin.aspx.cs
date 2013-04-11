@@ -53,8 +53,25 @@ public partial class Membership_Admin : System.Web.UI.Page
 
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
+        //Access username from DataKeys collection
+        //string username = GridView1.DataKeys[GridView1.SelectedIndex].Value.ToString();
+        string username = GridView1.SelectedDataKey.Value.ToString();
+        ProfileCommon pc = Profile.GetProfile(username);
+        Label1.Text = pc.FirstName;
+        Label2.Text = pc.LastName;
+        Label3.Text = pc.BirthDate.ToShortDateString();
+        Label4.Text = pc.Address.Street;
+        Label5.Text = pc.Address.City;
+        Label6.Text = pc.Address.State;
+        Label7.Text = pc.Address.Zip;
+        Label8.Text = pc.Address.Country;
 
+        //Change another user's profile
+        //pc.FirstName = "Justin";
+        //pc.Save();
     }
+
+
     protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
     {
         string username = GridView1.Rows[e.RowIndex].Cells[1].Text;
