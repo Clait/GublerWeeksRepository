@@ -14,8 +14,15 @@ public partial class ThemeDemo : System.Web.UI.Page
     protected void Page_PreInit(object sender, EventArgs e)
     {
         if (Session["SelectedTheme"] != null && Session["SelectedTheme"].ToString() != "None")
+        {
             this.Theme = Session["selectedTheme"].ToString();
             DropDownList1.SelectedValue = Session["SelectedTheme"].ToString();
+        }
+        else
+        {
+            
+        }
+            
     }
 
     protected void Page_Load(object sender, EventArgs e)

@@ -24,48 +24,18 @@ namespace GreetingCardMaker
                 string[] colorArray = Enum.GetNames(typeof(KnownColor));
                 lstBackColor.DataSource = colorArray;
                 lstBackColor.DataBind();
+                lstBackColor.SelectedValue = "Crimson";
 				
                 // Set font options.
-                //lstFontName.Items.Add("Times New Roman");
-                //lstFontName.Items.Add("Arial");
-                //lstFontName.Items.Add("Verdana");
-                //lstFontName.Items.Add("Tahoma")
                 InstalledFontCollection fonts = new InstalledFontCollection();
                 foreach (FontFamily family in fonts.Families)
                 {
                     lstFontName.Items.Add(family.Name);
                 }
-
-                //// Set border style options by adding a series of
-                //// ListItem objects.
-                //ListItem item = new ListItem();
-
-                //// The item text indicates the name of the option.
-                //item.Text = BorderStyle.None.ToString();
-
-                //// The item value records the corresponding integer
-                //// from the enumeration. To obtain this value, you
-                //// must cast the enumeration value to an integer,
-                //// and then convert the number to a string so it
-                //// can be placed in the HTML page.
-                //item.Value = ((int)BorderStyle.None).ToString();
-
-                //// Add the item.
-                //lstBorder.Items.Add(item);
-
-                //// Now repeat the process for two other border styles.
-                //item = new ListItem();
-                //item.Text = BorderStyle.Double.ToString();
-                //item.Value = ((int)BorderStyle.Double).ToString();
-                //lstBorder.Items.Add(item);
-
-                //item = new ListItem();
-                //item.Text = BorderStyle.Solid.ToString();
-                //item.Value = ((int)BorderStyle.Solid).ToString();
-                //lstBorder.Items.Add(item);
+                lstFontName.SelectedValue = "Segoe Script";
 			
 				// Select the first border option.
-				lstBorder.SelectedIndex = 0;
+				lstBorder.SelectedIndex = 1;
 
                 // Set border style options.
                 string[] borderStyleArray = Enum.GetNames(typeof(BorderStyle));
@@ -88,6 +58,9 @@ namespace GreetingCardMaker
 
         private void UpdateCard()
         {
+            // Make the system pause for a minute so the ProgressUpdate shows.
+            System.Threading.Thread.Sleep(2000);
+
             // (The code that draws the greeting card goes here.)
         
 			// Update the color.
@@ -128,7 +101,8 @@ namespace GreetingCardMaker
                     System.Web.UI.WebControls.Image i = new System.Web.UI.WebControls.Image();
                     i.ImageUrl = li.Value;
                     PlaceHolder1.Controls.Add(i);
-                    //i.Height="150px";
+                    i.Height = 170;
+                    i.BorderStyle = (BorderStyle)4;
                 }
             }
 
@@ -153,5 +127,13 @@ namespace GreetingCardMaker
                 lblFrom.Text = "From Warning 2";
             }
 		}
-	}
+        protected void txtGreeting_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCard();
+        }
+        protected void txtFrom_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCard();
+        }
+}
 }

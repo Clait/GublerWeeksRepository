@@ -36,12 +36,17 @@ public partial class Membership_Admin : System.Web.UI.Page
                 cbx.Checked = false;
             }
 
+            //cbx.Enabled = false;
         }
     }
 
     protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
     {
         GridView1.EditIndex = e.NewEditIndex;
+//        CheckBox cbx = (CheckBox)e.Row.FindControl("CheckBox1");
+        CheckBox cbx = ((CheckBox)GridView1.Rows[1].FindControl("CheckBox1"));
+//        CheckBox cbx = ((CheckBox)GridView1.Rows[GridView1.EditIndex].FindControl("CheckBox1"));
+        cbx.Enabled = false;
         GridView1.DataBind();
     }
 
@@ -85,6 +90,8 @@ public partial class Membership_Admin : System.Web.UI.Page
         {
             Roles.RemoveUserFromRole(username, "Admin");
         }
+
+        cbx.Enabled = false;
 
         GridView1.EditIndex = -1;
         GridView1.DataBind();

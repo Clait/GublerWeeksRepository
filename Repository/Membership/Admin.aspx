@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Membership_Admin" MaintainScrollPositionOnPostback="true" %>
-
 <%@ Register src="CurrentUserInfo.ascx" tagname="CurrentUserInfo" tagprefix="uc1" %>
 
 <!DOCTYPE html>
@@ -38,49 +37,49 @@
             <tr>
                 <td>First Name</td>
                 <td>
-            <asp:Label ID="Label1" runat="server"></asp:Label>
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Last Name</td>
                 <td class="auto-style1">
-            <asp:Label ID="Label2" runat="server"></asp:Label>
+                    <asp:Label ID="Label2" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>Phone</td>
                 <td>
-            <asp:Label ID="Label3" runat="server"></asp:Label>
+                    <asp:Label ID="Label3" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>Street</td>
                 <td>
-            <asp:Label ID="Label4" runat="server"></asp:Label>
+                    <asp:Label ID="Label4" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>City</td>
                 <td>
-            <asp:Label ID="Label5" runat="server"></asp:Label>
+                    <asp:Label ID="Label5" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>State</td>
                 <td>
-            <asp:Label ID="Label6" runat="server"></asp:Label>
+                    <asp:Label ID="Label6" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>Zip</td>
                 <td>
-            <asp:Label ID="Label7" runat="server"></asp:Label>
+                    <asp:Label ID="Label7" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>Country</td>
                 <td>
-            <asp:Label ID="Label8" runat="server"></asp:Label>
+                    <asp:Label ID="Label8" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>

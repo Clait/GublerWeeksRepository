@@ -12,6 +12,7 @@ public partial class Membership_CreateUser : System.Web.UI.Page
     {
 
     }
+
     protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
     {
         Roles.AddUserToRole(CreateUserWizard1.UserName, "User");
