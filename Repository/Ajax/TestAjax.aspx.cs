@@ -9,7 +9,7 @@ public partial class Ajax_TestAjax : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        System.Threading.Thread.Sleep(2000);
     }
 
     protected void Button1_Click(object sender, EventArgs e)

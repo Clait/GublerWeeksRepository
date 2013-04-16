@@ -11,4 +11,9 @@ public partial class Ajax_AjaxToolkit : System.Web.UI.Page
     {
 
     }
+    protected void TextBox1_TextChanged(object sender, EventArgs e)
+    {
+        Label1.Text = TextBox1.Text;
+        Label1.Enabled = true;
+    }
 }
