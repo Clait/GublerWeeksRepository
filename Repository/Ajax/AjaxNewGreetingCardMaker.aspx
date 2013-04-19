@@ -31,15 +31,6 @@
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <asp:Label ID="Label1" runat="server" Text="Choose a background color: " style="margin-left: 12px"></asp:Label><br />
-                        <asp:TextBox ID="lstBackColor" runat="server" AutoPostBack="true" style="margin-left: 12px" Height="20px" Width="225px" OnTextChanged="ControlChanged"></asp:TextBox>
-                        <asp:ColorPickerExtender ID="TextBox1_ColorPickerExtender" runat="server" Enabled="True" TargetControlID="lstBackColor" SampleControlID="pnlCard">
-                        </asp:ColorPickerExtender>
-                        <br />
-                        <br />
-                        <asp:Label ID="Label4" runat="server" Text="Choose a border style: " style="margin-left: 12px"></asp:Label>
-                        <asp:RadioButtonList ID="lstBorder" runat="server" style="margin-left: 12px" CellSpacing="5" Height="20px" RepeatColumns="2" Width="225px" AutoPostBack="True"  OnSelectedIndexChanged="ControlChanged" OnTextChanged="ControlChanged"></asp:RadioButtonList>
-                        <br />
                         <asp:Label ID="Label6" runat="server" Text="Enter the greeting text: " style="margin-left: 12px"></asp:Label><br />
                         <asp:TextBox ID="txtGreeting" runat="server" style="margin-left: 12px" Height="90px" TextMode="MultiLine" Width="225px" OnTextChanged="ControlChanged" AutoPostBack="True"></asp:TextBox>
                         <br />
@@ -52,9 +43,18 @@
                         <table style="margin-left: 12px"><tr><td><asp:TextBox ID="txtFontSize" runat="server" AutoPostBack="True" style="margin-left: 12px" Height="20px" Width="225px" OnTextChanged="ControlChanged"></asp:TextBox>
                         <asp:SliderExtender ID="TextBox2_SliderExtender" runat="server" Enabled="True" Maximum="72" Minimum="10" TargetControlID="txtFontSize" BoundControlID="Label8" EnableHandleAnimation="True" Length="225" Steps="31" TooltipText="Choose a font size"></asp:SliderExtender>
                         </td></tr></table>
-                    <br />
-                    <br />
-                </asp:Panel>
+                        <br />
+                        <br />
+                        <asp:Label ID="Label4" runat="server" Text="Choose a border style: " style="margin-left: 12px"></asp:Label>
+                        <asp:RadioButtonList ID="lstBorder" runat="server" style="margin-left: 12px" CellSpacing="5" Height="20px" RepeatColumns="2" Width="225px" AutoPostBack="True"  OnSelectedIndexChanged="ControlChanged" OnTextChanged="ControlChanged"></asp:RadioButtonList>
+                        <br />
+                        <asp:Label ID="Label1" runat="server" Text="Choose a background color: " style="margin-left: 12px"></asp:Label><br />
+                        <asp:TextBox ID="lstBackColor" runat="server" AutoPostBack="true" style="margin-left: 12px" Height="20px" Width="225px" OnTextChanged="ControlChanged"></asp:TextBox>
+                        <asp:ColorPickerExtender ID="TextBox1_ColorPickerExtender" runat="server" Enabled="True" TargetControlID="lstBackColor" SampleControlID="pnlCard">
+                        </asp:ColorPickerExtender>
+                        <br />
+                        <br />
+                    </asp:Panel>
                 <asp:DropShadowExtender ID="Panel1_DropShadowExtender" runat="server" Enabled="True" Opacity="0.8" Radius="10" Rounded="True" TargetControlID="Panel1" TrackPosition="True">
                 </asp:DropShadowExtender>
             </div>
@@ -62,7 +62,7 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:panel ID="pnlCard" style="Z-INDEX: 101; LEFT: 350px; POSITION: absolute; TOP: 16px" runat="server" 
-			                Height="615px" Width="400px" HorizontalAlign="Center" BackColor="Red" BorderStyle="Solid">
+			                Height="615px" Width="400px" HorizontalAlign="Center" BorderStyle="Solid">
                                 <br />
                                 <br /><br />
                                 <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
