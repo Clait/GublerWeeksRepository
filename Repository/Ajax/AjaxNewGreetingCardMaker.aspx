@@ -59,77 +59,35 @@
                 </asp:DropShadowExtender>
             </div>
             <div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
                         <asp:panel ID="pnlCard" style="Z-INDEX: 101; LEFT: 350px; POSITION: absolute; TOP: 16px" runat="server" 
-			                    Height="615px" Width="400px" HorizontalAlign="Center" BackColor="Red" BorderStyle="Solid">
-                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                                <ContentTemplate>
-                                    <br />
-                                    <br /><br />
-                                    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
-                                    <br /><br />
-                                    <br />
-			                        <asp:Label ID="lblGreeting" runat="server" Height="150px" Width="356px"></asp:Label>
-                                    <br />
-                                    <br />
-                                    <br />
-			                        <asp:Label ID="lblFrom" runat="server" Height="100px" Width="356px"></asp:Label>
-				                    <br /><br /><br />
-                            </ContentTemplate>
-                            <Triggers>
-                                <asp:AsyncPostBackTrigger ControlID="txtFrom"       EventName="TextChanged"/>
-                                <asp:AsyncPostBackTrigger ControlID="DropDownList1" EventName="SelectedIndexChanged" />
-                                <asp:AsyncPostBackTrigger ControlID="lstBackColor"  EventName="TextChanged" />
-                                <%--<asp:AsyncPostBackTrigger ControlID="lstBorder"     EventName="TextChanged" />--%>
-                                <asp:AsyncPostBackTrigger ControlID="txtGreeting"   EventName="TextChanged" />
-                                <asp:AsyncPostBackTrigger ControlID="lstFontName"   EventName="SelectedIndexChanged" />
-                                <asp:AsyncPostBackTrigger ControlID="txtFontSize"   EventName="TextChanged" />
-                            </Triggers>
-                     </asp:UpdatePanel>
-                     <asp:UpdatePanelAnimationExtender ID="UpdatePanel1_UpdatePanelAnimationExtender" runat="server" Enabled="True" TargetControlID="UpdatePanel1">
-                         <Animations>  
-                            <OnUpdating>  
-                                <Sequence>  
-                                    <%-- Store the original height of the panel --%>  
-                                    <ScriptAction Script="var b = $find('UpdatePanelAnimationExtender1'); b._originalHeight = b._element.offsetHeight;" />  
-                  
-                                    <%-- Do each of the selected effects --%>  
-                                    <Parallel duration=".25" Fps="30">  
-                                        <Condition ConditionScript="$get('effect_fade').checked">  
-                                            <FadeOut AnimationTarget="UpdatePanel" minimumOpacity=".2" />  
-                                        </Condition>  
-                                        <Condition ConditionScript="$get('effect_collapse').checked">  
-                                            <Resize Height="0" />  
-                                        </Condition>  
-                                        <Condition ConditionScript="$get('effect_color').checked">  
-                                            <Color AnimationTarget="UpdatePanel" PropertyKey="backgroundColor"  
-                                                EndValue="#FF0000" StartValue="#40669A" />  
-                                        </Condition>  
-                                    </Parallel>  
-                                </Sequence>  
-                            </OnUpdating>  
-                            <OnUpdated>  
-                                <Sequence>  
-                                    <%-- Do each of the selected effects --%>  
-                                    <Parallel duration=".25" Fps="30">  
-                                        <Condition ConditionScript="$get('effect_fade').checked">  
-                                            <FadeIn AnimationTarget="UpdatePanel" minimumOpacity=".2" />  
-                                        </Condition>  
-                                        <Condition ConditionScript="$get('effect_collapse').checked">  
-                                            <%-- Get the stored height --%>  
-                                            <Resize HeightScript="$find('UpdatePanelAnimationExtender1')._originalHeight" />  
-                                        </Condition>  
-                                        <Condition ConditionScript="$get('effect_color').checked">  
-                                            <Color AnimationTarget="UpdatePanel" PropertyKey="backgroundColor"  
-                                                StartValue="#FF0000" EndValue="#40669A" />  
-                                        </Condition>  
-                                    </Parallel>  
-                                </Sequence>  
-                            </OnUpdated>  
-                        </Animations> 
-                    </asp:UpdatePanelAnimationExtender>
-              </asp:panel>
-                <asp:DragPanelExtender ID="pnlCard_DragPanelExtender" runat="server" DragHandleID="pnlCard" Enabled="True" TargetControlID="pnlCard">
-                </asp:DragPanelExtender>
+			                Height="615px" Width="400px" HorizontalAlign="Center" BackColor="Red" BorderStyle="Solid">
+                                <br />
+                                <br /><br />
+                                <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                                <br /><br />
+                                <br />
+			                    <asp:Label ID="lblGreeting" runat="server" Height="150px" Width="356px"></asp:Label>
+                                <br />
+                                <br />
+                                <br />
+			                    <asp:Label ID="lblFrom" runat="server" Height="100px" Width="356px"></asp:Label>
+				                <br /><br /><br />
+                        </asp:panel>
+                    <asp:DragPanelExtender ID="pnlCard_DragPanelExtender" runat="server" DragHandleID="pnlCard" Enabled="True" TargetControlID="pnlCard">
+                    </asp:DragPanelExtender>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="txtFrom"       EventName="TextChanged"/>
+                        <asp:AsyncPostBackTrigger ControlID="DropDownList1" EventName="SelectedIndexChanged" />
+                        <asp:AsyncPostBackTrigger ControlID="lstBackColor"  EventName="TextChanged" />
+<%--                        <asp:AsyncPostBackTrigger ControlID="lstBorder"     EventName="SelectedIndexChanged" />--%>
+                        <asp:AsyncPostBackTrigger ControlID="txtGreeting"   EventName="TextChanged" />
+                        <asp:AsyncPostBackTrigger ControlID="lstFontName"   EventName="SelectedIndexChanged" />
+                        <asp:AsyncPostBackTrigger ControlID="txtFontSize"   EventName="TextChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
             </div>
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="10">
                     <ProgressTemplate>

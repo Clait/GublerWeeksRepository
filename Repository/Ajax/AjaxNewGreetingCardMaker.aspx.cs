@@ -50,7 +50,7 @@ public partial class Ajax_Default : System.Web.UI.Page
         // (The code that draws the greeting card goes here.)
 
         // Update the background color.
-        //pnlCard.BackColor = Color.FromArgb(lstBackColor.Text);
+        //pnlCard.BackColor = lstBackColor.Text;
 
         // Update the font.
         lblGreeting.Font.Name = lstFontName.SelectedItem.Text;
