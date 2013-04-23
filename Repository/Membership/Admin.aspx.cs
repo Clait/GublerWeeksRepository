@@ -70,6 +70,8 @@ public partial class Membership_Admin : System.Web.UI.Page
         Label6.Text = pc.Address.State;
         Label7.Text = pc.Address.Zip;
         Label8.Text = pc.Address.Country;
+        Label9.Text = pc.ShoeSize.ToString();
+        Label10.Text = pc.preferredTheme;
 
         //Change another user's profile
         //pc.FirstName = "Justin";

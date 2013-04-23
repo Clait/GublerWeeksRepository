@@ -58,4 +58,4 @@ public partial class DataControls_AuthorTitles : System.Web.UI.Page
         lblAuthorName.Visible = true;
         lblAuthorName.Text = "Titles authored by " + gvwAuthors.SelectedRow.Cells[4].Text + " " + gvwAuthors.SelectedRow.Cells[3].Text;
     }
-}
+} 

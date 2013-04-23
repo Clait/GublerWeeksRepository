@@ -221,7 +221,7 @@
      <h3>
         Sample Login Control</h3>
     <br />
-    <asp:Login runat=server ID="Login1" SkinID="LoginView" />
+    <asp:Login runat="server" ID="Login1" SkinID="LoginView" />
     <br />
 
 
